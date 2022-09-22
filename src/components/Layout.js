@@ -1,4 +1,5 @@
 import React from 'react';
+import { Box } from '@mui/material';
 import Header from './Header';
 import Footer from './Footer';
 
@@ -6,19 +7,19 @@ function Layout(props) {
   const { children } = props;
 
   return (
-    <div>
-      <div>
+    <Box display="flex" flexDirection="column" height="100vh">
+      <Box>
         <Header />
-      </div>
+      </Box>
 
-      <div>
+      <Box sx={{ flexGrow: 1 }}>
         <content>{children}</content>
-      </div>
+      </Box>
 
-      <div>
+      <Box>
         <Footer />
-      </div>
-    </div>
+      </Box>
+    </Box>
   );
 }
 
