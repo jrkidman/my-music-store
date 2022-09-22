@@ -36,3 +36,7 @@
     transform: rotate(360deg);
   }
 }
+
+#damn-appbar{
+  background-color: darkslategray;
+}

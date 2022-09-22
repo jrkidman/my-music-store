@@ -1,24 +1,19 @@
-import logo from './logo.svg';
 import './App.css';
+import Layout from './components/Layout';
 
 function App() {
+  // function HomePageContent() {
+  //   return <h1>"the main content home page"</h1>;
+  // }
+
+  // function AboutPageContent() {
+  //   return <h1>"about page content"</h1>;
+  // }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <h1>this is the new child of layout</h1>
+    </Layout>
   );
 }
 
