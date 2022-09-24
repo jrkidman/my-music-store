@@ -1,21 +1,18 @@
-import React from 'react';
 import { Box } from '@mui/material';
-import Header from './Header';
 import Footer from './Footer';
+import Header from './Header';
 
 function Layout(props) {
   const { children } = props;
 
   return (
-    <Box display="flex" flexDirection="column" height="100vh">
+    <Box display="flex" flexDirection="column" minHeight="100vh">
       <Box>
         <Header />
       </Box>
-
-      <Box sx={{ flexGrow: 1 }}>
-        <content>{children}</content>
+      <Box flexGrow={1} py={6}>
+        {children}
       </Box>
-
       <Box>
         <Footer />
       </Box>
