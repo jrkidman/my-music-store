@@ -4,6 +4,8 @@ import './App.css';
 import HomePage from './pages/HomePage';
 import CustomThemeProvider from './CustomThemeProvider';
 import SignIn from './pages/SignIn';
+import Cart from './pages/Cart';
+import { productList } from './components/MockData';
 
 function App() {
   const [email, setEmail] = useState();
@@ -15,7 +17,16 @@ function App() {
     <CustomThemeProvider>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={(
+              <HomePage
+                shoppingCart={shoppingCart}
+                setShoppingCart={setShoppingCart}
+              />
+)}
+          />
+
           <Route
             path="sign-in"
             element={(
@@ -30,7 +41,15 @@ function App() {
               />
 )}
           />
-          {/* <Route path="cart" element={<Cart />} /> */}
+          <Route
+            path="cart"
+            element={(
+              <Cart
+                shoppingCart={shoppingCart}
+                setShoppingCart={setShoppingCart}
+              />
+        )}
+          />
 
         </Routes>
       </BrowserRouter>

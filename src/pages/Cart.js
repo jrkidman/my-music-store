@@ -1,24 +1,24 @@
+import React, { useState } from 'react';
 import { Box } from '@mui/material';
-import { useState } from 'react';
+import ProductDisplay from './ProductDisplay';
 import { productList } from '../components/MockData';
 import Layout from '../components/Layout';
-import ProductDisplay from './ProductDisplay';
 
-function HomePage(props) {
+function Cart(props) {
   const { shoppingCart } = props;
-  const { setShoppingCart } = props;
 
   return (
     <Layout>
       <Box display="flex" flexDirection="column" alignItems="center">
-        {productList.map((product) => (
-          <Box mb={6} bgcolor="">
+        {shoppingCart.map((product) => (
+          <Box mb={6} bgcolor="pink">
             <ProductDisplay productData={product} />
           </Box>
         ))}
       </Box>
     </Layout>
+
   );
 }
 
-export default HomePage;
+export default Cart;

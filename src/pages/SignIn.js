@@ -1,6 +1,7 @@
 import { Box } from '@mui/system';
 import React, { useState } from 'react';
 import { Button } from '@mui/material';
+import { useNavigate } from 'react-router';
 import Layout from '../components/Layout';
 import { sampleUserData } from '../components/MockData';
 import CustomThemeProvider from '../CustomThemeProvider';
@@ -8,6 +9,8 @@ import CustomThemeProvider from '../CustomThemeProvider';
 function SignIn({
   email, setEmail, password, setPassword, isSignedIn, setIsSignedIn,
 }) {
+  const navigate = useNavigate();
+
   if (!isSignedIn) {
     return (
       <Layout>
@@ -59,14 +62,12 @@ function SignIn({
             type="submit"
             onClick={() => {
               setIsSignedIn(true);
-
               console.log('email: ', email);
             }}
           >
             Sign In
           </button>
         </Box>
-
       </Layout>
     );
   }
@@ -75,7 +76,17 @@ function SignIn({
       <CustomThemeProvider>
         <Layout>
           <Box textAlign="center">
-            <Button variant="contained" color="secondary">Logout</Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              onClick={() => {
+                setIsSignedIn(false);
+                navigate('/sign-in');
+              }}
+            >
+              Logout
+
+            </Button>
 
           </Box>
 
