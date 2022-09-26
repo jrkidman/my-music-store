@@ -19,6 +19,8 @@ module.exports = {
     'react/jsx-no-constructed-context-values': 'off',
     'react/react-in-jsx-scope': 'off',
     'react/prop-types': 'off',
+    'no-console': 'off',
+    'no-plusplus': 'off',
   },
   // overrides: [
   //   {

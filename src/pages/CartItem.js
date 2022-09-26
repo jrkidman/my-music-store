@@ -10,10 +10,7 @@ import FavoriteIcon from '@mui/icons-material/Favorite';
 import { Box, Button } from '@mui/material';
 import { useState } from 'react';
 
-function ProductDisplay({ productData, shoppingCart, setShoppingCart }) {
-    // why is this console log saying undefined???? not iterable...
-  console.log('shopping cart first: ', shoppingCart);
-
+function CartItem({ productData }) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardHeader
@@ -33,7 +30,7 @@ function ProductDisplay({ productData, shoppingCart, setShoppingCart }) {
       </CardContent>
       <CardActions disableSpacing>
         <Box display="flex" justifyContent="space-between" width={1}>
-          <button
+          {/* <button
             id="addToCart"
             type="submit"
             onClick={() => {
@@ -63,7 +60,7 @@ function ProductDisplay({ productData, shoppingCart, setShoppingCart }) {
             }}
           >
             Add to Cart
-          </button>
+          </button> */}
 
           {/* <Button
             id="add-to-cart"
@@ -86,4 +83,4 @@ function ProductDisplay({ productData, shoppingCart, setShoppingCart }) {
   );
 }
 
-export default ProductDisplay;
+export default CartItem;

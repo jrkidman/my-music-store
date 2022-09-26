@@ -85,13 +85,9 @@ function SignIn({
               }}
             >
               Logout
-
             </Button>
-
           </Box>
-
         </Layout>
-
       </CustomThemeProvider>
     );
   }

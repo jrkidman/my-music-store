@@ -11,7 +11,14 @@ function App() {
   const [email, setEmail] = useState();
   const [password, setPassword] = useState();
   const [isSignedIn, setIsSignedIn] = useState(false);
-  const [shoppingCart, setShoppingCart] = useState([]);
+  const [shoppingCart, setShoppingCart] = useState([{
+    id: '123',
+    title: 'Blue Drum Set',
+    description: 'Blue drums description',
+    brand: 'Yamaha',
+    price: 59999,
+    image: 'https://www.yamaha.com/yamahavgn/PIM/Images/19027_12073_1_1200x1200_80813f268e73483818697e99937dbd59.jpg',
+  }]);
 
   return (
     <CustomThemeProvider>
